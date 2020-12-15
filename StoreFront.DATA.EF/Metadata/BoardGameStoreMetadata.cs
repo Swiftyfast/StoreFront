@@ -90,6 +90,7 @@ namespace StoreFront.DATA.EF.Metadata
         public string ProductName { get; set; }
 
         [DisplayFormat(NullDisplayText = "[N/A]")]
+        [Display(Name = "Category")]
         public Nullable<int> CategoryID { get; set; }
 
         [Range(0, double.MaxValue, ErrorMessage = "* The value ust be a valid number, 0 or larger")]
@@ -107,6 +108,10 @@ namespace StoreFront.DATA.EF.Metadata
 
         [DisplayFormat(NullDisplayText = "[N/A]")]
         public Nullable<int> PublisherID { get; set; }
+
+        [Display(Name = "Image")]
+        [DisplayFormat(NullDisplayText = "[N/A]")]
+        public string ImagePath { get; set; }
     }
 
     [MetadataType(typeof(ProductMetaData))]

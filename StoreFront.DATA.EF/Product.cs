@@ -21,6 +21,7 @@ namespace StoreFront.DATA.EF
         public Nullable<int> UnitsSold { get; set; }
         public Nullable<int> InventoryStatus { get; set; }
         public Nullable<int> PublisherID { get; set; }
+        public string ImagePath { get; set; }
     
         public virtual Category Category { get; set; }
         public virtual InventoryStatu InventoryStatu { get; set; }
