@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-namespace StoreFront.DATA.EF.Metadata
+namespace StoreFront.DATA.EF//.Metadata
 {
     #region Category Metadata
     public class CategroyMetaData
@@ -14,6 +14,7 @@ namespace StoreFront.DATA.EF.Metadata
 
         [Required(ErrorMessage = "* Required")]
         [StringLength(50, ErrorMessage = "* Category name must be 50 characters or less.")]
+        [Display(Name = "Category")]
         public string CategoryName { get; set; }
     }
 
@@ -27,6 +28,7 @@ namespace StoreFront.DATA.EF.Metadata
         //public int DepartmentID { get; set; }
         [Required(ErrorMessage = "* Required")]
         [StringLength(20, ErrorMessage = "* Department name must be 20 characters or less.")]
+        [Display(Name = "Department")]
         public string DepartmentName { get; set; }
     }
 
@@ -57,6 +59,7 @@ namespace StoreFront.DATA.EF.Metadata
         public Nullable<System.DateTime> StartDate { get; set; }
         
         [DisplayFormat(NullDisplayText = "[N/A]")]
+        [Display(Name = "Direct Report To")]
         public Nullable<int> DirectReportTo { get; set; }
 
         [DisplayFormat(NullDisplayText = "[N/A]")]
@@ -90,7 +93,6 @@ namespace StoreFront.DATA.EF.Metadata
         public string ProductName { get; set; }
 
         [DisplayFormat(NullDisplayText = "[N/A]")]
-        [Display(Name = "Category")]
         public Nullable<int> CategoryID { get; set; }
 
         [Range(0, double.MaxValue, ErrorMessage = "* The value ust be a valid number, 0 or larger")]
